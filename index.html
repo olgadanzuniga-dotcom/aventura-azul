@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aventura Azul — Aprender jugando, a su propio ritmo</title>
+<meta name="description" content="Plataforma educativa gratuita para niñas y niños con TEA: más de 35 actividades de matemáticas, memoria, música, emociones y comunicación con pictogramas. Descarga la demo para Android.">
+<meta property="og:title" content="Aventura Azul">
+<meta property="og:description" content="Aprender jugando, a su propio ritmo. Plataforma educativa para niñas y niños con TEA.">
+<meta property="og:image" content="img/og.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#2B6CC4">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="barra" id="barra">
+  <div class="contenedor barra-interior">
+    <a class="marca" href="#top" aria-label="Aventura Azul">
+      <img src="img/logo.webp" alt="" width="44" height="44">
+      <span>Aventura Azul</span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Principal">
+      <a href="#app" data-i18n="nav.app">La app</a>
+      <a href="#como" data-i18n="nav.how">Cómo funciona</a>
+      <a href="#areas" data-i18n="nav.areas">Áreas</a>
+      <a href="#familias" data-i18n="nav.families">Familias</a>
+      <a href="#privacidad" data-i18n="nav.privacy">Privacidad</a>
+      <a href="#faq" data-i18n="nav.faq">Preguntas</a>
+    </nav>
+    <div class="barra-acciones">
+      <label class="selector-idioma">
+        <span class="sr" data-i18n="lang">Idioma</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 4 6 4 9.5s-1.4 6.7-4 9.5c-2.6-2.8-4-6-4-9.5s1.4-6.7 4-9.5z"/></svg>
+        <select id="idioma" aria-label="Idioma / Language">
+          <option value="es">ES</option><option value="en">EN</option><option value="pt">PT</option><option value="fr">FR</option>
+        </select>
+      </label>
+      <a class="boton boton-chico" href="#descargar" data-i18n="nav.download">Descargar demo</a>
+      <button class="hamburguesa" id="hamburguesa" aria-label="Menú" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="contenido">
+<!-- ============ PORTADA ============ -->
+<section class="portada" id="top">
+  <div class="olas" aria-hidden="true"></div>
+  <div class="contenedor portada-grid">
+    <div class="portada-texto">
+      <p class="etiqueta" data-i18n="hero.tag">Plataforma educativa para niñas y niños con TEA</p>
+      <h1 data-i18n-html="hero.title">Aprender jugando,<br><span class="resalta">a su propio ritmo.</span></h1>
+      <p class="portada-p" data-i18n="hero.text"></p>
+      <div class="botones">
+        <a class="boton" href="#descargar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg><span data-i18n="hero.cta1">Descargar demo para Android</span></a>
+        <a class="boton boton-claro" href="#como" data-i18n="hero.cta2">Ver cómo funciona</a>
+      </div>
+      <p class="nota" data-i18n="hero.note"></p>
+    </div>
+    <div class="portada-imagen">
+      <div class="tableta"><img data-src-idioma="img/menu_{idioma}.webp" src="img/menu_es.webp" alt="" width="1400" height="875"></div>
+      <img class="flota flota-1" src="img/pirata_tamy.webp" alt="" width="200">
+      <img class="flota flota-2" src="img/astronauta.webp" alt="" width="200">
+      <img class="flota flota-3" src="img/luni.webp" alt="" width="200">
+    </div>
+  </div>
+</section>
+
+<!-- ============ CIFRAS ============ -->
+<section class="cifras" aria-label="Cifras">
+  <div class="contenedor cifras-grid">
+    <div class="cifra"><strong data-i18n="stats.1n"></strong><p data-i18n="stats.1t"></p><small><a href="#fuentes" data-i18n="stats.1s"></a></small></div>
+    <div class="cifra"><strong data-i18n="stats.2n"></strong><p data-i18n="stats.2t"></p><small><a href="#fuentes" data-i18n="stats.2s"></a></small></div>
+    <div class="cifra"><strong data-i18n="stats.3n"></strong><p data-i18n="stats.3t"></p><small data-i18n="stats.3s"></small></div>
+    <div class="cifra"><strong data-i18n="stats.4n"></strong><p data-i18n="stats.4t"></p><small data-i18n="stats.4s"></small></div>
+  </div>
+</section>
+
+<!-- ============ RETO Y PROPUESTA ============ -->
+<section class="seccion" id="app">
+  <div class="contenedor dos-columnas">
+    <div>
+      <p class="kicker" data-i18n="problem.kicker"></p>
+      <h2 data-i18n="problem.title"></h2>
+      <p data-i18n="problem.p1"></p>
+      <p data-i18n="problem.p2"></p>
+      <p class="destacado" data-i18n="problem.p3"></p>
+    </div>
+    <div class="tarjeta-propuesta">
+      <p class="kicker" data-i18n="solution.kicker"></p>
+      <h3 data-i18n="solution.title"></h3>
+      <p data-i18n="solution.p"></p>
+      <ul class="checks">
+        <li data-i18n="solution.b1"></li><li data-i18n="solution.b2"></li>
+        <li data-i18n="solution.b3"></li><li data-i18n="solution.b4"></li>
+      </ul>
+    </div>
+  </div>
+  <div class="contenedor personajes">
+    <p class="personajes-titulo" data-i18n="chars.title"></p>
+    <div class="personajes-fila">
+      <figure><img src="img/pirata.webp" alt="" loading="lazy"><figcaption>Pirata</figcaption></figure>
+      <figure><img src="img/pirata_tamy.webp" alt="" loading="lazy"><figcaption>Tamy</figcaption></figure>
+      <figure><img src="img/mora_sirena.webp" alt="" loading="lazy"><figcaption>Mora</figcaption></figure>
+      <figure><img src="img/luni.webp" alt="" loading="lazy"><figcaption>Luni</figcaption></figure>
+      <figure><img src="img/astronauta.webp" alt="" loading="lazy"><figcaption>Astronauta</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CÓMO FUNCIONA ============ -->
+<section class="seccion seccion-azul" id="como">
+  <div class="contenedor">
+    <p class="kicker" data-i18n="how.kicker"></p>
+    <h2 data-i18n="how.title"></h2>
+    <ol class="pasos">
+      <li><span class="num">1</span><h3 data-i18n="how.s1t"></h3><p data-i18n="how.s1p"></p></li>
+      <li><span class="num">2</span><h3 data-i18n="how.s2t"></h3><p data-i18n="how.s2p"></p></li>
+      <li><span class="num">3</span><h3 data-i18n="how.s3t"></h3><p data-i18n="how.s3p"></p></li>
+      <li><span class="num">4</span><h3 data-i18n="how.s4t"></h3><p data-i18n="how.s4p"></p></li>
+    </ol>
+    <figure class="diagrama">
+      <figcaption><span data-i18n="how.diagram"></span> <a id="abrir-diagrama" href="img/diagrama_es.webp" target="_blank" rel="noopener" data-i18n="how.open"></a></figcaption>
+      <a id="enlace-diagrama" href="img/diagrama_es.webp" target="_blank" rel="noopener"><img data-src-idioma="img/diagrama_{idioma}.webp" src="img/diagrama_es.webp" alt="" loading="lazy" width="2400" height="1780"></a>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ ÁREAS ============ -->
+<section class="seccion" id="areas">
+  <div class="contenedor">
+    <p class="kicker" data-i18n="areas.kicker"></p>
+    <h2 data-i18n="areas.title"></h2>
+    <div class="areas">
+      <article class="area" style="--c:#E07A3C"><h3 data-i18n="area.math"></h3><p data-i18n="area.math.p"></p><ul data-i18n-list="list.math"></ul></article>
+      <article class="area" style="--c:#D9488F"><h3 data-i18n="area.mem"></h3><p data-i18n="area.mem.p"></p><ul data-i18n-list="list.mem"></ul></article>
+      <article class="area" style="--c:#7B5EC6"><h3 data-i18n="area.mus"></h3><p data-i18n="area.mus.p"></p><ul data-i18n-list="list.mus"></ul></article>
+      <article class="area" style="--c:#3FA66B"><h3 data-i18n="area.din"></h3><p data-i18n="area.din.p"></p><ul data-i18n-list="list.din"></ul></article>
+      <article class="area" style="--c:#2B6CC4"><h3 data-i18n="area.pal"></h3><p data-i18n="area.pal.p"></p><ul data-i18n-list="list.pal"></ul></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CARACTERÍSTICAS ============ -->
+<section class="seccion seccion-arena">
+  <div class="contenedor">
+    <p class="kicker" data-i18n="features.kicker"></p>
+    <h2 data-i18n="features.title"></h2>
+    <div class="rejilla">
+      <article class="carac"><span class="icono" aria-hidden="true">💬</span><h3 data-i18n="f1.t"></h3><p data-i18n="f1.p"></p></article>
+      <article class="carac"><span class="icono" aria-hidden="true">📷</span><h3 data-i18n="f2.t"></h3><p data-i18n="f2.p"></p></article>
+      <article class="carac"><span class="icono" aria-hidden="true">🗓️</span><h3 data-i18n="f3.t"></h3><p data-i18n="f3.p"></p></article>
+      <article class="carac"><span class="icono" aria-hidden="true">🫧</span><h3 data-i18n="f4.t"></h3><p data-i18n="f4.p"></p></article>
+      <article class="carac"><span class="icono" aria-hidden="true">💛</span><h3 data-i18n="f5.t"></h3><p data-i18n="f5.p"></p></article>
+      <article class="carac"><span class="icono" aria-hidden="true">⏱️</span><h3 data-i18n="f6.t"></h3><p data-i18n="f6.p"></p></article>
+      <article class="carac"><span class="icono" aria-hidden="true">🌙</span><h3 data-i18n="f7.t"></h3><p data-i18n="f7.p"></p></article>
+      <article class="carac"><span class="icono" aria-hidden="true">🌐</span><h3 data-i18n="f8.t"></h3><p data-i18n="f8.p"></p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAMILIAS ============ -->
+<section class="seccion" id="familias">
+  <div class="contenedor dos-columnas alinear-centro">
+    <div>
+      <p class="kicker" data-i18n="families.kicker"></p>
+      <h2 data-i18n="families.title"></h2>
+      <div class="lista-familias">
+        <div><h3 data-i18n="fam1.t"></h3><p data-i18n="fam1.p"></p></div>
+        <div><h3 data-i18n="fam2.t"></h3><p data-i18n="fam2.p"></p></div>
+        <div><h3 data-i18n="fam3.t"></h3><p data-i18n="fam3.p"></p></div>
+        <div><h3 data-i18n="fam4.t"></h3><p data-i18n="fam4.p"></p></div>
+      </div>
+      <p class="aviso" data-i18n="fam.note"></p>
+    </div>
+    <div class="tableta tableta-inclinada"><img data-src-idioma="img/aventura_{idioma}.webp" src="img/aventura_es.webp" alt="" loading="lazy" width="1400" height="875"></div>
+  </div>
+</section>
+
+<!-- ============ GALERÍA ============ -->
+<section class="seccion seccion-azul" id="galeria">
+  <div class="contenedor">
+    <p class="kicker" data-i18n="gallery.kicker"></p>
+    <h2 data-i18n="gallery.title"></h2>
+    <div class="galeria" id="galeria-pista" tabindex="0">
+      <figure><img data-src-idioma="img/personaje_{idioma}.webp" src="img/personaje_es.webp" alt="" loading="lazy" width="1400" height="875"><figcaption data-i18n="g.personaje"></figcaption></figure>
+      <figure><img data-src-idioma="img/menu_{idioma}.webp" src="img/menu_es.webp" alt="" loading="lazy" width="1400" height="875"><figcaption data-i18n="g.menu"></figcaption></figure>
+      <figure><img data-src-idioma="img/tablero_{idioma}.webp" src="img/tablero_es.webp" alt="" loading="lazy" width="1400" height="875"><figcaption data-i18n="g.tablero"></figcaption></figure>
+      <figure><img data-src-idioma="img/muneco_{idioma}.webp" src="img/muneco_es.webp" alt="" loading="lazy" width="1400" height="875"><figcaption data-i18n="g.muneco"></figcaption></figure>
+      <figure><img data-src-idioma="img/midia_{idioma}.webp" src="img/midia_es.webp" alt="" loading="lazy" width="1400" height="875"><figcaption data-i18n="g.midia"></figcaption></figure>
+      <figure><img data-src-idioma="img/aventura_{idioma}.webp" src="img/aventura_es.webp" alt="" loading="lazy" width="1400" height="875"><figcaption data-i18n="g.aventura"></figcaption></figure>
+    </div>
+    <div class="galeria-controles">
+      <button class="flecha" id="galeria-ant" aria-label="←">‹</button>
+      <button class="flecha" id="galeria-sig" aria-label="→">›</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRIVACIDAD ============ -->
+<section class="seccion" id="privacidad">
+  <div class="contenedor">
+    <p class="kicker" data-i18n="privacy.kicker"></p>
+    <h2 data-i18n="privacy.title"></h2>
+    <div class="rejilla rejilla-4">
+      <article class="carac carac-borde"><span class="icono" aria-hidden="true">🚫</span><h3 data-i18n="p1.t"></h3><p data-i18n="p1.p"></p></article>
+      <article class="carac carac-borde"><span class="icono" aria-hidden="true">📱</span><h3 data-i18n="p2.t"></h3><p data-i18n="p2.p"></p></article>
+      <article class="carac carac-borde"><span class="icono" aria-hidden="true">🔒</span><h3 data-i18n="p3.t"></h3><p data-i18n="p3.p"></p></article>
+      <article class="carac carac-borde"><span class="icono" aria-hidden="true">🧑‍🏫</span><h3 data-i18n="p4.t"></h3><p data-i18n="p4.p"></p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DESCARGAR ============ -->
+<section class="seccion descarga" id="descargar">
+  <div class="contenedor descarga-grid">
+    <div class="descarga-tarjeta">
+      <img src="img/logo.webp" alt="" width="110" height="110">
+      <p class="kicker" data-i18n="download.kicker"></p>
+      <h2 data-i18n="download.title"></h2>
+      <p data-i18n="download.p"></p>
+      <a class="boton boton-grande" id="boton-apk" href="https://github.com/olgadanzuniga-dotcom/aventura-azul/releases/latest/download/AventuraAzul-demo.apk">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>
+        <span data-i18n="download.btn">Descargar APK para Android</span>
+      </a>
+      <p class="meta" data-i18n="download.meta"></p>
+      <p class="meta" data-i18n="download.soon"></p>
+    </div>
+    <div class="instalar">
+      <h3 data-i18n="download.how"></h3>
+      <ol data-i18n-list="download.steps"></ol>
+      <p class="sha"><span data-i18n="download.sha"></span><code>90f0c032ec3e37647bb9201af30b9c0912be7ac48f0eddf8d068cf8a991e85ab</code></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PREGUNTAS ============ -->
+<section class="seccion seccion-arena" id="faq">
+  <div class="contenedor angosto">
+    <p class="kicker" data-i18n="faq.kicker"></p>
+    <h2 data-i18n="faq.title"></h2>
+    <div class="preguntas">
+      <details><summary data-i18n="q1"></summary><p data-i18n="a1"></p></details>
+      <details><summary data-i18n="q2"></summary><p data-i18n="a2"></p></details>
+      <details><summary data-i18n="q3"></summary><p data-i18n="a3"></p></details>
+      <details><summary data-i18n="q4"></summary><p data-i18n="a4"></p></details>
+      <details><summary data-i18n="q5"></summary><p data-i18n="a5"></p></details>
+      <details><summary data-i18n="q6"></summary><p data-i18n="a6"></p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="pie">
+  <div class="contenedor pie-grid">
+    <div>
+      <a class="marca marca-pie" href="#top"><img src="img/logo.webp" alt="" width="52" height="52"><span>Aventura Azul</span></a>
+      <p data-i18n="footer.tag"></p>
+      <p class="pie-aviso" data-i18n="footer.disclaimer"></p>
+    </div>
+    <div id="fuentes">
+      <h3 data-i18n="footer.sources"></h3>
+      <ul class="fuentes">
+        <li><a href="https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders" target="_blank" rel="noopener">OMS / WHO — Autism spectrum disorders, fact sheet (2025)</a></li>
+        <li><a href="https://link.springer.com/10.1007/s10803-016-2696-6" target="_blank" rel="noopener">Fombonne E. et al. — Prevalence of Autism Spectrum Disorders in Guanajuato, Mexico: The Leon survey. J Autism Dev Disord (2016)</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="contenedor pie-final"><span data-i18n="footer.rights"></span></div>
+</footer>
+
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
