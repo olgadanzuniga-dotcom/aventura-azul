@@ -15,7 +15,7 @@
   --borde: #DDE6F2;
   --radio: 22px;
   --sombra: 0 10px 30px rgba(18, 50, 92, .10);
-  --titulo: "Sniglet", "Nunito", system-ui, sans-serif;
+  --titulo: "Fredoka", "Sniglet", "Nunito", system-ui, sans-serif;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 84px; }
@@ -28,7 +28,7 @@ img { max-width: 100%; height: auto; display: block; }
 a { color: var(--azul); }
 h1, h2, h3 { font-family: var(--titulo); color: var(--marino); line-height: 1.15; margin: 0 0 .5em; }
 h1 { font-size: clamp(2.3rem, 5.2vw, 3.9rem); font-weight: 800; }
-h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); font-weight: 400; max-width: 24ch; }
+h2 { font-size: clamp(1.9rem, 3.8vw, 2.8rem); font-weight: 600; max-width: 24ch; letter-spacing: -.01em; }
 h3 { font-family: "Nunito", system-ui, sans-serif; font-size: 1.15rem; font-weight: 800; }
 p { margin: 0 0 1em; }
 .contenedor { width: min(1180px, 100% - 32px); margin-inline: auto; }
@@ -123,15 +123,11 @@ p { margin: 0 0 1em; }
 .personajes figcaption { font-weight: 800; color: var(--marino); margin-top: 6px; }
 
 /* ---------- Pasos ---------- */
-.pasos { list-style: none; padding: 0; margin: 36px 0 48px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; counter-reset: paso; }
+.pasos { list-style: none; padding: 0; margin: 36px 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; counter-reset: paso; }
 .pasos li { background: #fff; border-radius: var(--radio); padding: 26px 22px; box-shadow: var(--sombra); position: relative; }
 .pasos li:not(:last-child)::after { content: "→"; position: absolute; right: -16px; top: 30px; color: var(--azul); font-weight: 900; font-size: 1.3rem; }
 .num { width: 44px; height: 44px; border-radius: 14px; background: var(--amarillo); color: var(--marino); display: grid; place-items: center; font-family: var(--titulo); font-weight: 800; font-size: 1.3rem; margin-bottom: 14px; }
 .pasos p { margin: 0; color: var(--gris); }
-.diagrama { margin: 0; background: #fff; border-radius: var(--radio); padding: 18px; box-shadow: var(--sombra); }
-.diagrama figcaption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-weight: 800; color: var(--marino); margin: 4px 6px 14px; }
-.diagrama figcaption a { font-weight: 700; }
-.diagrama img { border-radius: 12px; border: 1px solid var(--borde); }
 
 /* ---------- Áreas ---------- */
 .areas { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-top: 36px; }
@@ -231,3 +227,85 @@ p { margin: 0 0 1em; }
   .personajes img { height: 120px; }
   .personajes figure { width: 92px; }
 }
+
+/* ==================== MÁS COLOR ==================== */
+/* Título principal: letras redondas en degradado con borde de calcomanía */
+.titulo-portada { font-family: "Fredoka", sans-serif; font-weight: 700; font-size: clamp(2.7rem, 6.4vw, 4.9rem); line-height: 1.02; letter-spacing: -.015em; margin-bottom: 22px; }
+.titulo-portada .t1, .titulo-portada .t2 {
+  display: block; width: fit-content;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  -webkit-text-stroke: 0; paint-order: stroke fill;
+  filter: drop-shadow(0 3px 0 #fff) drop-shadow(0 6px 0 rgba(18,50,92,.18));
+}
+.titulo-portada .t1 { background-image: linear-gradient(95deg, #F06B5B 0%, #F28A73 35%, #F5B142 70%, #F2C94C 100%); }
+.titulo-portada .t2 { background-image: linear-gradient(95deg, #1D4F98 0%, #2B6CC4 40%, #2BA8C8 75%, #4CC7E6 100%); padding-bottom: .08em; }
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  .titulo-portada .t1 { color: var(--coral); } .titulo-portada .t2 { color: var(--azul); }
+}
+.etiqueta { background: linear-gradient(90deg, #FFF 0%, #FFF6DA 100%); border: 2px solid var(--amarillo); color: var(--marino); }
+.etiqueta::before { content: "🧩 "; }
+
+/* Portada con más color */
+.portada { background:
+  radial-gradient(900px 420px at 85% 10%, rgba(76,199,230,.35), transparent 60%),
+  radial-gradient(700px 380px at 5% 90%, rgba(242,201,76,.35), transparent 60%),
+  radial-gradient(600px 300px at 55% 50%, rgba(242,138,115,.18), transparent 60%),
+  linear-gradient(180deg, #E3F5FD 0%, #D8F0FB 55%, var(--arena) 100%); }
+.deco { position: absolute; inset: 0; pointer-events: none; }
+.burbuja { position: absolute; border-radius: 50%; background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.95), rgba(255,255,255,.25) 45%, rgba(76,199,230,.35) 100%); border: 2px solid rgba(255,255,255,.8); animation: subir 9s ease-in-out infinite; }
+.b1 { width: 70px; height: 70px; left: 4%; top: 18%; }
+.b2 { width: 34px; height: 34px; left: 44%; top: 8%; animation-delay: -2s; }
+.b3 { width: 52px; height: 52px; left: 52%; bottom: 22%; animation-delay: -4s; }
+.b4 { width: 24px; height: 24px; right: 6%; top: 52%; animation-delay: -6s; }
+.b5 { width: 90px; height: 90px; right: 30%; top: -20px; opacity: .7; animation-delay: -3s; }
+@keyframes subir { 50% { transform: translateY(-18px) scale(1.04); } }
+.pieza { position: absolute; width: 64px; opacity: .55; }
+.pieza path { fill: currentColor; }
+.p1 { color: #A8E4F5; left: 38%; top: 70%; transform: rotate(-18deg); }
+.p2 { color: #F7C9BC; right: 3%; top: 10%; transform: rotate(24deg); width: 54px; }
+.p3 { color: #F5DE8E; left: 1%; bottom: 14%; transform: rotate(12deg); width: 48px; }
+@media (prefers-reduced-motion: reduce) { .burbuja { animation: none; } }
+
+/* Etiquetas de sección en píldoras de color */
+.kicker { display: inline-block; background: #FFE8E1; color: #D4573F; padding: 6px 14px; border-radius: 999px; letter-spacing: .06em; }
+.seccion-azul .kicker { background: #fff; color: var(--azul); }
+.seccion-arena .kicker { background: #fff; color: #B07A0E; }
+.tarjeta-propuesta .kicker { background: rgba(255,255,255,.18); color: var(--amarillo); }
+.descarga-tarjeta .kicker { background: var(--cielo-claro); color: var(--azul); }
+
+/* Subtítulos con subrayado de color */
+.seccion h2::after, .descarga h2::after { content: ""; display: block; width: 84px; height: 8px; border-radius: 8px; margin-top: 14px;
+  background: linear-gradient(90deg, var(--coral), var(--amarillo), #4CC7E6, var(--azul)); }
+.descarga-tarjeta h2::after { margin-inline: auto; }
+.tarjeta-propuesta h3 { font-family: "Fredoka", sans-serif; font-weight: 600; }
+
+/* Cifras en degradado */
+.cifra { position: relative; overflow: hidden; padding-top: 30px; }
+.cifra::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 7px; background: linear-gradient(90deg, var(--azul), #4CC7E6); }
+.cifra:nth-child(2)::before { background: linear-gradient(90deg, #E0574A, var(--amarillo)); }
+.cifra:nth-child(3)::before { background: linear-gradient(90deg, #3FA66B, #A6E3BE); }
+.cifra:nth-child(4)::before { background: linear-gradient(90deg, #7B5EC6, #C9B6F5); }
+.cifra strong { font-family: "Fredoka", sans-serif; font-weight: 700; font-size: 2.3rem;
+  background: linear-gradient(95deg, var(--azul), #2BA8C8); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.cifra:nth-child(2) strong { background-image: linear-gradient(95deg, #E0574A, var(--coral)); }
+.cifra:nth-child(3) strong { background-image: linear-gradient(95deg, #3FA66B, #6CC48E); }
+.cifra:nth-child(4) strong { background-image: linear-gradient(95deg, #7B5EC6, #A285E8); }
+
+/* Pasos y características con más color */
+.pasos li:nth-child(1) .num { background: #FFD9CF; color: #C2462F; }
+.pasos li:nth-child(2) .num { background: #FFEFC2; color: #9A6A00; }
+.pasos li:nth-child(3) .num { background: #CFF1FA; color: #1C7F9C; }
+.pasos li:nth-child(4) .num { background: #DCE8FF; color: var(--azul); }
+.num { font-family: "Fredoka", sans-serif; font-weight: 700; }
+.carac:nth-child(4n+1) .icono { background: #FFE8E1; }
+.carac:nth-child(4n+2) .icono { background: #FFF3CF; }
+.carac:nth-child(4n+3) .icono { background: #DFF5EA; }
+.carac:nth-child(4n+4) .icono { background: #ECE6FB; }
+.carac { transition: transform .2s, box-shadow .2s; }
+.carac:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(18,50,92,.12); }
+.area h3 { font-family: "Fredoka", sans-serif; font-weight: 600; }
+.personajes-titulo { font-family: "Fredoka", sans-serif; font-weight: 600; }
+.marca { font-family: "Fredoka", sans-serif; font-weight: 700; }
+.marca span { background: linear-gradient(95deg, #F28A73, #F2C94C 45%, #2BA8C8 70%, var(--azul)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.marca-pie span { background: none; color: #fff; }
+@media (max-width: 860px) { .pieza, .b2, .b5 { display: none; } }

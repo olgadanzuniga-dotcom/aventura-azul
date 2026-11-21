@@ -14,7 +14,7 @@
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=Sniglet:wght@400;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -52,10 +52,16 @@
 <!-- ============ PORTADA ============ -->
 <section class="portada" id="top">
   <div class="olas" aria-hidden="true"></div>
+  <div class="deco" aria-hidden="true">
+    <span class="burbuja b1"></span><span class="burbuja b2"></span><span class="burbuja b3"></span><span class="burbuja b4"></span><span class="burbuja b5"></span>
+    <svg class="pieza p1" viewBox="0 0 100 100"><path d="M20 30h18a12 12 0 1 1 24 0h18v18a12 12 0 1 0 0 24v18H62a12 12 0 1 0-24 0H20V72a12 12 0 1 1 0-24z"/></svg>
+    <svg class="pieza p2" viewBox="0 0 100 100"><path d="M20 30h18a12 12 0 1 1 24 0h18v18a12 12 0 1 0 0 24v18H62a12 12 0 1 0-24 0H20V72a12 12 0 1 1 0-24z"/></svg>
+    <svg class="pieza p3" viewBox="0 0 100 100"><path d="M20 30h18a12 12 0 1 1 24 0h18v18a12 12 0 1 0 0 24v18H62a12 12 0 1 0-24 0H20V72a12 12 0 1 1 0-24z"/></svg>
+  </div>
   <div class="contenedor portada-grid">
     <div class="portada-texto">
       <p class="etiqueta" data-i18n="hero.tag">Plataforma educativa para niñas y niños con TEA</p>
-      <h1 data-i18n-html="hero.title">Aprender jugando,<br><span class="resalta">a su propio ritmo.</span></h1>
+      <h1 class="titulo-portada" data-i18n-html="hero.title"><span class="t1">Aprender jugando,</span> <span class="t2">a su propio ritmo.</span></h1>
       <p class="portada-p" data-i18n="hero.text"></p>
       <div class="botones">
         <a class="boton" href="#descargar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg><span data-i18n="hero.cta1">Descargar demo para Android</span></a>
@@ -125,10 +131,6 @@
       <li><span class="num">3</span><h3 data-i18n="how.s3t"></h3><p data-i18n="how.s3p"></p></li>
       <li><span class="num">4</span><h3 data-i18n="how.s4t"></h3><p data-i18n="how.s4p"></p></li>
     </ol>
-    <figure class="diagrama">
-      <figcaption><span data-i18n="how.diagram"></span> <a id="abrir-diagrama" href="img/diagrama_es.webp" target="_blank" rel="noopener" data-i18n="how.open"></a></figcaption>
-      <a id="enlace-diagrama" href="img/diagrama_es.webp" target="_blank" rel="noopener"><img data-src-idioma="img/diagrama_{idioma}.webp" src="img/diagrama_es.webp" alt="" loading="lazy" width="2400" height="1780"></a>
-    </figure>
   </div>
 </section>
 

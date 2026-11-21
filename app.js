@@ -47,10 +47,6 @@
       fc.setAttribute("data-base", base);
       fc.textContent = (NOMBRES[base] && NOMBRES[base][idioma]) || base;
     });
-    var diag = "img/diagrama_" + idioma + ".webp";
-    ["abrir-diagrama", "enlace-diagrama"].forEach(function (id) {
-      var a = document.getElementById(id); if (a) a.href = diag;
-    });
     selector.value = idioma;
   }
 
